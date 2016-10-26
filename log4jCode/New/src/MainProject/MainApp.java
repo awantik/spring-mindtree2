@@ -1,0 +1,27 @@
+package MainProject;
+
+import org.apache.log4j.Logger;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
+public class MainApp {
+	
+	static Logger log = Logger.getLogger(MainApp.class.getName());
+	
+	
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		ApplicationContext appCtxt = new AnnotationConfigApplicationContext(AppConfig.class);
+
+		
+		log.info("Strting now");
+		log.warn("Warning Log");
+		
+		Shoe s = appCtxt.getBean(Shoe.class);
+		log.debug("Debug Log" + s.getPrice());
+		
+		log.error("Exiting");
+	}
+
+}

@@ -1,0 +1,6 @@
+package MainProject;
+
+@Configuration
+public class AppConfig {
+
+}

@@ -1,0 +1,12 @@
+package MainProject;
+
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+public class AppConfig {
+	
+	public Shoe getShoe(){
+		return new Puma();
+	}
+
+}
